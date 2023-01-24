@@ -1,0 +1,16 @@
+.ava {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.ava img {
+  width: 3rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+ul {
+  list-style: none;
+}
