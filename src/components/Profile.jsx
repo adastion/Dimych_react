@@ -1,15 +1,16 @@
 import React from 'react';
+import styles from './Profile.module.css';
 
 const Profile = () => {
   return (
-    <main className="content">
-      <div className="banner"></div>
-      <div>ava description</div>
-      <div>My posts</div>
-      <div>New posts</div>
-      <div>post 1</div>
-      <div>post 2</div>
-    </main>
+    <ul className={styles.content}>
+      <div className={styles.banner}></div>
+      <li>ava description</li>
+      <li>My posts</li>
+      <li>New posts</li>
+      <li className={styles.item}>post 1</li>
+      <li className={styles.item}>post 2</li>
+    </ul>
   );
 };
 

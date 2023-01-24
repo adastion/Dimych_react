@@ -1,0 +1,12 @@
+.nav {
+  background: yellowgreen;
+  grid-column: 1/2;
+}
+
+.item > a {
+  color: aquamarine;
+}
+
+.active > a {
+  color: gold;
+}

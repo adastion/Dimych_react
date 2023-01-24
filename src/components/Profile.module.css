@@ -1,0 +1,14 @@
+.content {
+  background: rebeccapurple;
+  grid-column: 2/3;
+  color: antiquewhite;
+  margin: 0;
+}
+
+.banner {
+  height: 5rem;
+  max-width: 100%;
+  width: 100%;
+  background: url('https://www.sott.net/image/s17/351608/full/start_prepping.jpg') center;
+  background-size: 180px;
+}
