@@ -6,14 +6,14 @@ const MyPosts = () => {
   return (
     <div>
       <div>Myposts</div>
-      <div>
-        <textarea cols="30" rows="3"></textarea>
+      <div className={styles.textareaWrap}>
+        <textarea cols="30" rows="3" />
         <button>Add post</button>
         <button>Remove post</button>
       </div>
       <ul className={styles.dotnot}>
-        <Post />
-        <Post />
+        <Post message="Hi" />
+        <Post message="Bay" />
         <Post />
       </ul>
     </div>

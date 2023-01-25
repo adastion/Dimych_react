@@ -19,9 +19,14 @@
   background: none;
   outline: none;
   color: antiquewhite;
+  font-size: 12px;
 }
 
 .btn:hover {
   cursor: pointer;
   color: aqua;
+}
+
+.text {
+  color: whitesmoke;
 }
