@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './MyPosts.module.css';
+import Post from '../MyPosts/Post/Post';
 
 const MyPosts = () => {
   return (
@@ -10,26 +11,10 @@ const MyPosts = () => {
         <button>Add post</button>
         <button>Remove post</button>
       </div>
-      <ul>
-        <li className={styles.item}>
-          <div className={styles.ava}>
-            <img
-              src="https://aniyuki.com/wp-content/uploads/2022/05/image-sad-anime-boy-aniyuki.com-62.jpg"
-              alt="avatar"
-            />
-          </div>
-          <p>post 1</p>
-        </li>
-        <li className={styles.item}>
-          <div className={styles.ava}>
-            <img
-              src="https://aniyuki.com/wp-content/uploads/2022/05/image-sad-anime-boy-aniyuki.com-62.jpg"
-              alt="avatar"
-            />
-          </div>
-          <p>post 1</p>
-        </li>
-  
+      <ul className={styles.dotnot}>
+        <Post />
+        <Post />
+        <Post />
       </ul>
     </div>
   );
