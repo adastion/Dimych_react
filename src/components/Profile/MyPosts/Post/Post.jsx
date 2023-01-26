@@ -11,7 +11,7 @@ const Post = (props) => {
         />
       </div>
       <p className={styles.text}>{props.message}</p>
-      <button className={styles.btn}>Like</button>
+      <button className={styles.btn}>Like</button><span> {props.likesCount}</span>
     </div>
   );
 };

@@ -12,8 +12,8 @@ const MyPosts = () => {
         <button>Remove post</button>
       </div>
       <ul className={styles.dotnot}>
-        <Post message="Hi" />
-        <Post message="Bay" />
+        <Post message="Hi" likesCount='3'/>
+        <Post message="Bay" likesCount='1'/>
         <Post />
       </ul>
     </div>
