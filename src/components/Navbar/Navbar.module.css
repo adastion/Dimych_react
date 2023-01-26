@@ -5,8 +5,9 @@
 
 .item > a {
   color: aquamarine;
+  text-decoration: none;
 }
 
-.active > a {
+.item a.active {
   color: gold;
 }
