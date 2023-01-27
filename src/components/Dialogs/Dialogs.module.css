@@ -1,13 +1,12 @@
 .block {
   display: grid;
+  align-items: start;
   grid-template-columns: 3fr 6fr;
-  padding-left: 2rem;
-  padding-top: 2rem;
   gap: 1rem;
 }
 
 .item {
-  background: rosybrown;
+  background: #bbc1d6;
   border-radius: 6px;
   padding: 1rem;
   width: 100%;
@@ -20,4 +19,17 @@
 .item a.active {
   background: yellow;
   color: gold;
+}
+
+.list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.messageText {
+  padding: 1.5rem;
+  border-radius: 6px;
+  background: #313c55;
+  max-height: 100%;
+  color: #83a4c8f0;
 }

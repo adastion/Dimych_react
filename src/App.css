@@ -76,6 +76,7 @@ ul[class] {
   max-width: 1440px;
   margin: 0 auto;
   display: grid;
+  align-items: start;
   grid-template-columns: 1fr 3fr;
   gap: 1rem;
   font-size: 20px;
@@ -84,7 +85,7 @@ ul[class] {
 .app > * {
   border-radius: 0.6rem;
   overflow: hidden;
-  padding: 0.5rem;
+  padding: 2rem;
 }
 
 .content {
