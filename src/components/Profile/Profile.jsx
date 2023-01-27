@@ -3,9 +3,9 @@ import '../../App.css'
 import MyPosts from './MyPosts/MyPosts';
 import styles from './Profile.module.css';
 
-const Profile = () => {
+const Profile = (props) => {
   return (
-    <ul className='content'>
+    <ul className="content">
       <div className={styles.banner}></div>
       <li>ava description</li>
       <MyPosts />

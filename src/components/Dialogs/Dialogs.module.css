@@ -1,0 +1,23 @@
+.block {
+  display: grid;
+  grid-template-columns: 3fr 6fr;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  gap: 1rem;
+}
+
+.item {
+  background: rosybrown;
+  border-radius: 6px;
+  padding: 1rem;
+  width: 100%;
+}
+
+.item a {
+  text-decoration: none;
+}
+
+.item a.active {
+  background: yellow;
+  color: gold;
+}
