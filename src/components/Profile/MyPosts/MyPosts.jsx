@@ -5,17 +5,11 @@ import Post from '../MyPosts/Post/Post';
 const MyPosts = (props) => {
   return (
     <div>
-      <div>Myposts</div>
-      <div className={styles.textareaWrap}>
-        <textarea cols="30" rows="3" />
-        <button>Add post</button>
-        <button>Remove post</button>
-      </div>
-      <ul className={styles.dotnot}>
+      <div className={styles.dotnot}>
         <Post message="Hi" likesCount="3" />
         <Post message="Bay" likesCount="1" />
         <Post />
-      </ul>
+      </div>
     </div>
   );
 };

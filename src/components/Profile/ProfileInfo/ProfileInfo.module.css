@@ -1,0 +1,39 @@
+.textareaWrap {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 3fr 1fr;
+  gap: 0.5rem;
+  max-width: 480px;
+  margin-bottom: 1rem;
+}
+
+.textareaWrap textarea {
+  resize: none;
+  grid-row: 1/3;
+  padding: 0.3rem;
+}
+
+.myAvatar {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.myProfile {
+  display: grid;
+}
+
+.wrapDescription {
+  margin: 1rem;
+  display: flex;
+  grid-template: 1.5rem;
+}
+
+.wrapDescription p {
+  flex-grow: 1;
+}
+
+.title {
+  color: burlywood;
+  margin-bottom: 1rem;
+}

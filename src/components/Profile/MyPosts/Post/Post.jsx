@@ -10,8 +10,13 @@ const Post = (props) => {
           alt="avatar"
         />
       </div>
-      <p className={styles.text}>{props.message}</p>
-      <button className={styles.btn}>Like</button><span> {props.likesCount}</span>
+      <div className={styles.text}>
+        <p>{props.message}</p>
+      </div>
+      <div className={styles.btnWrap}>
+        <button className={styles.btn}>Like</button>
+        <span> {props.likesCount}</span>
+      </div>
     </div>
   );
 };
