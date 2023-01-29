@@ -1,6 +1,17 @@
 .userItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
   width: 100px;
   height: 100%;
-  background: palegoldenrod;
-  color: black;
+  color: royalblue;
+  margin-bottom: 1.5rem;
+}
+
+.userItem img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
 }

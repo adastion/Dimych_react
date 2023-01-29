@@ -4,7 +4,7 @@ import styles from './User.module.css';
 const User = (props) => {
   return (
     <div className={styles.userItem}>
-      <img src='img/andrey.png' alt="avatar" />
+      <img src={props.ava} alt="avatar" />
       {props.name}
     </div>
   );

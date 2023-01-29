@@ -28,12 +28,28 @@ const state = {
 
   users: {
     userData: [
-      { id: 1, name: 'Dimych', pathAva: '../../../img/dima.jpg' },
-      { id: 2, name: 'Andrey', pathAva: '../../img/andrey.jpg' },
-      { id: 3, name: 'Sveta', pathAva: '../../img/sveta.jpg' },
-      { id: 4, name: 'Sasha', pathAva: '../../img/sasha.jpg' },
-      { id: 5, name: 'Victor', pathAva: '../../img/victor.jpg' },
-      { id: 6, name: 'Valera', pathAva: '../../img/valera.jpg' },
+      { id: 1, name: 'Dimych', pathAva: 'https://avatarko.ru/img/kartinka/9/serial_8759.jpg' },
+      { id: 2, name: 'Andrey', pathAva: 'https://avatarko.ru/img/kartinka/17/muzhchina_16823.jpg' },
+      {
+        id: 3,
+        name: 'Sveta',
+        pathAva: 'https://avatarko.ru/img/kartinka/26/devushka_blondinka_kapyushon_25929.jpg',
+      },
+      {
+        id: 4,
+        name: 'Sasha',
+        pathAva: 'https://avatarko.ru/img/kartinka/11/devushka_blondinka_10873.jpg',
+      },
+      {
+        id: 5,
+        name: 'Victor',
+        pathAva: 'https://avatarko.ru/img/kartinka/10/muzhchina_kapyushon_luk_9596.jpg',
+      },
+      {
+        id: 6,
+        name: 'Valera',
+        pathAva: 'https://avatarko.ru/img/kartinka/19/fantastika_muzhchina_kapyushon_18781.jpg',
+      },
     ],
   },
 };
