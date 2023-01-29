@@ -6,7 +6,7 @@ const Post = (props) => {
     <div className={styles.item}>
       <div className={styles.ava}>
         <img
-          src="https://aniyuki.com/wp-content/uploads/2022/05/image-sad-anime-boy-aniyuki.com-62.jpg"
+          src="https://w7.pngwing.com/pngs/464/554/png-transparent-account-avatar-profile-user-avatars-icon.png"
           alt="avatar"
         />
       </div>

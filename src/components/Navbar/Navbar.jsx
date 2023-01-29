@@ -36,7 +36,7 @@ const Navbar = (props) => {
         </li>
         <li className={styles.item}>
           <NavLink
-            to="Settigs"
+            to="settigs"
             className={(navData) => (navData.isActive ? styles.active : styles.item)}>
             Settings
           </NavLink>
