@@ -11,10 +11,15 @@ function App(props) {
     <BrowserRouter>
       <div className="app">
         <Header />
-        <Navbar />
+        <Navbar user={props.state.users} sideBar={props.state.sideBar} />
         <Routes>
-          <Route path="/profile" element={<Profile dataPosts={props.state.postsPage} user={props.state.users}/>} />
-          <Route path="/dialogs" element={<Dialogs dialogs={props.state.dialogsPage} messages={props.state.dialogsPage}/>} />
+          <Route path="/profile" element={<Profile dataPosts={props.state.postsPage} />} />
+          <Route
+            path="/dialogs"
+            element={
+              <Dialogs dialogs={props.state.dialogsPage} messages={props.state.dialogsPage} />
+            }
+          />
         </Routes>
       </div>
     </BrowserRouter>
