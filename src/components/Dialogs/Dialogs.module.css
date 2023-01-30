@@ -10,6 +10,8 @@
   border-radius: 6px;
   padding: 1rem;
   width: 100%;
+  display: flex;
+  grid-template: 1rem;
 }
 
 .item a {
