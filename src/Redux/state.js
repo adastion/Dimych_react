@@ -53,13 +53,13 @@ const state = {
     ],
   },
 
-  sideBar: {
-    menuData: [
-      { id: 1, path: '/profile', name: 'Profile' },
-      { id: 2, path: '/dialogs', name: 'Messages' },
-      { id: 3, path: '/news', name: 'News' },
-      { id: 4, path: '/music', name: 'Music' },
-      { id: 5, path: '/setting', name: 'Setting' },
+  sidebar: {
+    navItemData: [
+      { id: 1, pathUrl: '/profile', name: 'Profile' },
+      { id: 2, pathUrl: '/dialogs', name: 'Messages' },
+      { id: 3, pathUrl: '/news', name: 'News' },
+      { id: 4, pathUrl: '/music', name: 'Music' },
+      { id: 5, pathUrl: '/setting', name: 'Setting' },
     ],
   },
 };
