@@ -32,14 +32,14 @@ const state = {
       },
       {
         id: 2,
-        message: '',
+        message: 'Hi',
         name: 'Andrey',
         pathAva: 'https://avatarko.ru/img/kartinka/17/muzhchina_16823.jpg',
       },
       {
         id: 3,
         message: 'Bay',
-        name: '',
+        name: 'Sveta',
         pathAva: 'https://avatarko.ru/img/kartinka/26/devushka_blondinka_kapyushon_25929.jpg',
       },
       {
@@ -56,7 +56,7 @@ const state = {
       },
       {
         id: 6,
-        message: 'Lalalalala',
+        message: '',
         name: 'Valera',
         pathAva: 'https://avatarko.ru/img/kartinka/19/fantastika_muzhchina_kapyushon_18781.jpg',
       },
