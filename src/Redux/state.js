@@ -1,10 +1,6 @@
 const state = {
   dialogsPage: {
-    messagesData: [
-      { id: 1, message: 'Hello' },
-      { id: 2, message: 'Hi' },
-      { id: 3, message: 'Bay' },
-    ],
+    // messagesData: [{ id: 1 }, { id: 2, message: 'Hi' }, { id: 3, message: 'Bay' }],
 
     dialogsData: [
       { id: 1, name: 'Dimych' },
@@ -28,25 +24,39 @@ const state = {
 
   users: {
     userData: [
-      { id: 1, name: 'Dimych', pathAva: 'https://avatarko.ru/img/kartinka/9/serial_8759.jpg' },
-      { id: 2, name: 'Andrey', pathAva: 'https://avatarko.ru/img/kartinka/17/muzhchina_16823.jpg' },
+      {
+        id: 1,
+        message: 'Hello',
+        name: 'Dimych',
+        pathAva: 'https://avatarko.ru/img/kartinka/9/serial_8759.jpg',
+      },
+      {
+        id: 2,
+        message: '',
+        name: 'Andrey',
+        pathAva: 'https://avatarko.ru/img/kartinka/17/muzhchina_16823.jpg',
+      },
       {
         id: 3,
-        name: 'Sveta',
+        message: 'Bay',
+        name: '',
         pathAva: 'https://avatarko.ru/img/kartinka/26/devushka_blondinka_kapyushon_25929.jpg',
       },
       {
         id: 4,
+        message: 'Hello world',
         name: 'Sasha',
         pathAva: 'https://avatarko.ru/img/kartinka/11/devushka_blondinka_10873.jpg',
       },
       {
         id: 5,
+        message: 'Yo!',
         name: 'Victor',
         pathAva: 'https://avatarko.ru/img/kartinka/10/muzhchina_kapyushon_luk_9596.jpg',
       },
       {
         id: 6,
+        message: 'Lalalalala',
         name: 'Valera',
         pathAva: 'https://avatarko.ru/img/kartinka/19/fantastika_muzhchina_kapyushon_18781.jpg',
       },

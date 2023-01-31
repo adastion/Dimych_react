@@ -1,8 +1,12 @@
 .block {
   display: grid;
-  align-items: start;
   grid-template-columns: 3fr 6fr;
   gap: 1rem;
+}
+
+.block > div {
+  border-right: 5px solid azure;
+  border-radius: 10px;
 }
 
 .item {
@@ -25,7 +29,9 @@
 
 .list {
   display: grid;
-  gap: 1.5rem;
+  gap: 1rem 0;
+  background: #6d7588;
+  padding: 1rem;
 }
 
 .messageText {
