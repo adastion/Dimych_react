@@ -32,7 +32,7 @@ const state = {
       },
       {
         id: 2,
-        message: 'Hi',
+        message: '',
         name: 'Andrey',
         pathAva: 'https://avatarko.ru/img/kartinka/17/muzhchina_16823.jpg',
       },

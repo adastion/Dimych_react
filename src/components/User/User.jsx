@@ -2,20 +2,27 @@ import React from 'react';
 import styles from './User.module.css';
 
 const User = (props) => {
-  let mes;
+  let text;
   if (props.message) {
-    mes = <div className={styles.message}>{props.message}</div>;
+    text = <div className={styles.message}>{props.message}</div>;
   } else if (props.message === '' || props.message === undefined) {
-    mes = null;
+    text = null;
+  }
+
+  let userAva;
+  if (props.ava) {
+    userAva = <img src={props.ava} alt="avatar" />;
+  } else if (props.ava === '' || props.ava === undefined) {
+    userAva = null;
   }
 
   return (
     <div className={styles.userItem}>
       <div className={styles.user}>
-        <img src={props.ava} alt="avatar" />
+        {userAva}
         {props.name}
       </div>
-      {mes}
+      {text}
     </div>
   );
 };

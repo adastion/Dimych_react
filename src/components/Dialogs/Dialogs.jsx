@@ -10,9 +10,17 @@ const Dialogs = (props) => {
     ),
   );
 
+  let presentUser = props.users.userData.map((userEl) =>
+    userEl.message === '' || userEl.message === undefined ? null : (
+      <div className={styles.userListItem}>
+        <User name={userEl.name} />
+      </div>
+    ),
+  );
+
   return (
     <div className={`${styles.block} content`}>
-      <div></div>
+      <div className={styles.userList}>{presentUser}</div>
       <div className={styles.list}>{dialogsElements}</div>
     </div>
   );
