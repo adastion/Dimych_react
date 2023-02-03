@@ -1,7 +1,5 @@
 const state = {
   dialogsPage: {
-    // messagesData: [{ id: 1 }, { id: 2, message: 'Hi' }, { id: 3, message: 'Bay' }],
-
     dialogsData: [
       { id: 1, name: 'Dimych' },
       { id: 2, name: 'Andrey' },

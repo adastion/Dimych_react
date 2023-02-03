@@ -48,7 +48,7 @@
   padding: 0.8rem;
 }
 
-.userListItem  div {
+.userListItem div {
   color: azure;
 }
 
@@ -56,4 +56,33 @@
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+}
+
+.textareaWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.textareaWrap textarea {
+  height: 3rem;
+  border-radius: 6px;
+  background: azure;
+  resize: none;
+  padding: 0.5rem;
+}
+
+.textareaWrap button {
+  padding: 0.5rem;
+  background: azure;
+  border: none;
+}
+
+.textareaWrap button:hover {
+  background: #313c55;
+  color: azure;
+}
+
+.textareaWrap button:active {
+  color: #6d7588;
 }

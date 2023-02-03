@@ -2,6 +2,13 @@ import React from 'react';
 import styles from './ProfileInfo.module.css';
 
 const ProfileInfo = (props) => {
+  let newPostElement = React.createRef();
+
+  let addPost = () => {
+    let text = newPostElement.current.value;
+    alert(text)
+  };
+
   return (
     <div className={styles.myProfile}>
       <div className={styles.wrapDescription}>
@@ -14,8 +21,8 @@ const ProfileInfo = (props) => {
       </div>
       <h2 className={styles.title}>My posts</h2>
       <div className={styles.textareaWrap}>
-        <textarea cols="30" rows="3" />
-        <button>Add post</button>
+        <textarea ref={newPostElement} cols="30" rows="3" />
+        <button onClick={addPost}>Add post</button>
         <button>Remove post</button>
       </div>
     </div>

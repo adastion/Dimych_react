@@ -18,10 +18,22 @@ const Dialogs = (props) => {
     ),
   );
 
+  let newDialogElement = React.createRef();
+  const addDialog = () => {
+    let text = newDialogElement.current.value;
+    alert(text);
+  };
+
   return (
     <div className={`${styles.block} content`}>
       <div className={styles.userList}>{presentUser}</div>
-      <div className={styles.list}>{dialogsElements}</div>
+      <div className={styles.list}>
+        {dialogsElements}
+        <div className={styles.textareaWrap}>
+          <textarea ref={newDialogElement} />
+          <button onClick={addDialog}>Add post</button>
+        </div>
+      </div>
     </div>
   );
 };
