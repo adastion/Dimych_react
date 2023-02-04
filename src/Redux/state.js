@@ -1,3 +1,5 @@
+import { rerenderEntireTree } from "../render";
+
 const state = {
   dialogsPage: {
     dialogsData: [
@@ -70,6 +72,17 @@ const state = {
       { id: 5, pathUrl: '/setting', name: 'Setting' },
     ],
   },
+};
+
+export let addPost = (postMessage) => {
+  let newPost = {
+    id: 7,
+    message: postMessage,
+    likesCount: 0,
+  };
+
+  state.postsPage.postData.push(newPost);
+  rerenderEntireTree(state);
 };
 
 export default state;
