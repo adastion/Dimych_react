@@ -1,4 +1,4 @@
-import { rerenderEntireTree } from "../render";
+import { rerenderEntireTree } from '../render';
 
 const state = {
   dialogsPage: {
@@ -20,6 +20,7 @@ const state = {
       { id: 2, message: 'Bay', likesCount: 1 },
       { id: 3, message: 'buga gaga', likesCount: 4 },
     ],
+    newPostText: '',
   },
 
   users: {
@@ -82,6 +83,11 @@ export let addPost = (postMessage) => {
   };
 
   state.postsPage.postData.push(newPost);
+  rerenderEntireTree(state);
+};
+
+export let updateNewPostChange = (newText) => {
+  state.postsPage.newPostText = newText;
   rerenderEntireTree(state);
 };
 

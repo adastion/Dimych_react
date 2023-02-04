@@ -7,6 +7,12 @@ const ProfileInfo = (props) => {
   let addPost = () => {
     let text = newPostElement.current.value;
     props.addPost(text);
+    props.updateNewPostChange('');
+  };
+
+  let onPostChange = () => {
+    let text = newPostElement.current.value;
+    props.updateNewPostChange(text);
   };
 
   return (
@@ -21,7 +27,7 @@ const ProfileInfo = (props) => {
       </div>
       <h2 className={styles.title}>My posts</h2>
       <div className={styles.textareaWrap}>
-        <textarea ref={newPostElement} cols="30" rows="3" />
+        <textarea onChange={onPostChange} ref={newPostElement} cols="30" rows="3" value={props.newPostText}/>
         <button onClick={addPost}>Add post</button>
         <button>Remove post</button>
       </div>
