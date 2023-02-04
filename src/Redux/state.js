@@ -14,10 +14,10 @@ const state = {
 
   postsPage: {
     postData: [
-      { id: 1, message: 'Hi', likesCount: 2 },
-      { id: 1, message: 'Hi', likesCount: 2 },
-      { id: 1, message: 'Hi', likesCount: 2 },
-      { id: 2, message: 'Bay', likesCount: 1 },
+      { id: 1, message: '', likesCount: 2 },
+      { id: 1, message: '', likesCount: 2 },
+      { id: 1, message: '', likesCount: 2 },
+      { id: 2, message: '', likesCount: 1 },
       { id: 3, message: 'buga gaga', likesCount: 4 },
     ],
     newPostText: '',
@@ -75,14 +75,15 @@ const state = {
   },
 };
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
   let newPost = {
     id: 7,
-    message: postMessage,
+    message: state.postsPage.newPostText,
     likesCount: 0,
   };
 
   state.postsPage.postData.push(newPost);
+  state.postsPage.newPostText = '';
   rerenderEntireTree(state);
 };
 
