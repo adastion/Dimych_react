@@ -1,4 +1,6 @@
-import { rerenderEntireTree } from "../render";
+let rerenderEntireTree = () => {
+  console.log('Biggi')
+}
 
 const state = {
   dialogsPage: {
@@ -14,12 +16,13 @@ const state = {
 
   postsPage: {
     postData: [
-      { id: 1, message: 'Hi', likesCount: 2 },
-      { id: 1, message: 'Hi', likesCount: 2 },
-      { id: 1, message: 'Hi', likesCount: 2 },
-      { id: 2, message: 'Bay', likesCount: 1 },
+      { id: 1, message: '', likesCount: 2 },
+      { id: 1, message: '', likesCount: 2 },
+      { id: 1, message: '', likesCount: 2 },
+      { id: 2, message: '', likesCount: 1 },
       { id: 3, message: 'buga gaga', likesCount: 4 },
     ],
+    newPostText: '',
   },
 
   users: {
@@ -74,15 +77,25 @@ const state = {
   },
 };
 
-export let addPost = (postMessage) => {
+export const addPost = () => {
   let newPost = {
     id: 7,
-    message: postMessage,
+    message: state.postsPage.newPostText,
     likesCount: 0,
   };
 
   state.postsPage.postData.push(newPost);
+  state.postsPage.newPostText = '';
   rerenderEntireTree(state);
 };
+
+export const updateNewPostChange = (newText) => {
+  state.postsPage.newPostText = newText;
+  rerenderEntireTree(state);
+};
+
+export const subscribe = (observer) => {
+  rerenderEntireTree = observer;
+}
 
 export default state;

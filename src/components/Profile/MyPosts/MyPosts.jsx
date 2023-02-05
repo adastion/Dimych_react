@@ -3,7 +3,11 @@ import styles from './MyPosts.module.css';
 import Post from '../MyPosts/Post/Post';
 
 const MyPosts = (props) => {
-  let postsElements = props.posts.postData.map((p) => <Post message={p.message} likesCount={p.likesCount} />);
+  let postsElements = props.posts.postData.map((p) =>
+    p.message === '' || p.message === undefined ? null : (
+      <Post message={p.message} likesCount={p.likesCount} />
+    ),
+  );
 
   return (
     <div>
