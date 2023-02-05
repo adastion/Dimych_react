@@ -1,4 +1,6 @@
-import { rerenderEntireTree } from '../render';
+let rerenderEntireTree = () => {
+  console.log('Biggi')
+}
 
 const state = {
   dialogsPage: {
@@ -75,7 +77,7 @@ const state = {
   },
 };
 
-export let addPost = () => {
+export const addPost = () => {
   let newPost = {
     id: 7,
     message: state.postsPage.newPostText,
@@ -87,9 +89,13 @@ export let addPost = () => {
   rerenderEntireTree(state);
 };
 
-export let updateNewPostChange = (newText) => {
+export const updateNewPostChange = (newText) => {
   state.postsPage.newPostText = newText;
   rerenderEntireTree(state);
 };
+
+export const subscribe = (observer) => {
+  rerenderEntireTree = observer;
+}
 
 export default state;
