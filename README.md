@@ -1,4 +1,4 @@
-## A training project based on the "IT-KAMASUTRA" video course.
+# A training project based on the "IT-KAMASUTRA" video course.
 
 
 # Getting Started with Create React App
