@@ -9,9 +9,8 @@ const Profile = (props) => {
     <div className="content">
       <div className={styles.banner}></div>
       <ProfileInfo
-        updateNewPostChange={props.updateNewPostChange}
+        dispatch={props.dispatch}
         newPostText={props.newPostText}
-        addPost={props.addPost}
       />
       <MyPosts posts={props.postsPage} />
     </div>

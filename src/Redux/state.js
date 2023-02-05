@@ -74,33 +74,33 @@ let store = {
     },
   },
 
-  getState () {
-    return this._state;
-  },
-
   _callSubscriber() {
     console.log('Biggi');
   },
 
-  addPost() {
-    let newPost = {
-      id: 7,
-      message: this._state.postsPage.newPostText,
-      likesCount: 0,
-    };
-
-    this._state.postsPage.postData.push(newPost);
-    this._state.postsPage.newPostText = '';
-    this._callSubscriber(this._state);
-  },
-
-  updateNewPostChange(newText) {
-    this._state.postsPage.newPostText = newText;
-    this._callSubscriber(this._state);
+  getState() {
+    return this._state;
   },
 
   subscribe(observer) {
     this._callSubscriber = observer;
+  },
+
+  dispatch(action) {
+    if (action.type === 'ADD-POST') {
+      let newPost = {
+        id: 7,
+        message: this._state.postsPage.newPostText,
+        likesCount: 0,
+      };
+
+      this._state.postsPage.postData.push(newPost);
+      this._state.postsPage.newPostText = '';
+      this._callSubscriber(this._state);
+    } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+      this._state.postsPage.newPostText = action.newText;
+      this._callSubscriber(this._state);
+    }
   },
 };
 
