@@ -16,10 +16,9 @@ function App(props) {
           path="/profile"
           element={
             <Profile
-              addPost={props.addPost}
+              dispatch={props.dispatch}
               postsPage={props.state.postsPage}
               newPostText={props.state.postsPage.newPostText}
-              updateNewPostChange={props.updateNewPostChange}
             />
           }
         />
