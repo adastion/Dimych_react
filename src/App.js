@@ -13,20 +13,11 @@ function App(props) {
       <Sidebar />
       <main className="content">
         <h2>Content</h2>
-        <Routes>
-          <Route path="/profile">
-            <Profile />
-          </Route>
-          <Route path="/dialogs">
-            <Dialogs />
-          </Route>
-        </Routes>
         <section>
-          <div>Profile</div>
-          <div>Messages</div>
-          <div>News</div>
-          <div>Music</div>
-          <div>Setting</div>
+          <Routes>
+            <Route path="/profile" element={<Profile />}></Route>
+            <Route path="/dialogs" element={<Dialogs />}></Route>
+          </Routes>
         </section>
       </main>
       <footer className="footer">
