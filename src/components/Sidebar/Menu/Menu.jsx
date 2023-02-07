@@ -5,19 +5,19 @@ const Menu = (props) => {
   return (
     <ul className={style.menu}>
       <li>
-        <NavLink to="#s">Profile</NavLink>
+        <NavLink to="/profile">Profile</NavLink>
       </li>
       <li>
-        <NavLink to="#s">Messages</NavLink>
+        <NavLink to="/dialogs">Messages</NavLink>
       </li>
       <li>
-        <NavLink to="#s">News</NavLink>
+        <NavLink to="/news">News</NavLink>
       </li>
       <li>
-        <NavLink to="#s">Music</NavLink>
+        <NavLink to="/music">Music</NavLink>
       </li>
       <li>
-        <NavLink to="#s">Setting</NavLink>
+        <NavLink to="/setting">Setting</NavLink>
       </li>
     </ul>
   );
