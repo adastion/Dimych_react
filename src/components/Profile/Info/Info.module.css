@@ -1,0 +1,15 @@
+.info {
+  display: flex;
+  gap: 3rem;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.description {
+  flex-grow: 1;
+}

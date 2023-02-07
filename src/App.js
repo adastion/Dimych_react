@@ -1,5 +1,6 @@
 import { React } from 'react';
 import './App.css';
+import logoFooter from './img/logo_footer.png'
 import { Route, Routes } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
@@ -21,8 +22,7 @@ function App(props) {
         </section>
       </main>
       <footer className="footer">
-        <h3>Footer</h3>
-        <section>about</section>
+        <img src={logoFooter} alt="logo-footer" />
       </footer>
     </div>
   );
