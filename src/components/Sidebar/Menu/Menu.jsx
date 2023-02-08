@@ -5,19 +5,37 @@ const Menu = (props) => {
   return (
     <ul className={style.menu}>
       <li>
-        <NavLink to="/profile">Profile</NavLink>
+        <NavLink
+          to="/profile"
+          className={(navData) => (navData.isActive ? style.active : style.menu)}>
+          Profile
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/dialogs">Messages</NavLink>
+        <NavLink
+          to="/dialogs"
+          className={(navData) => (navData.isActive ? style.active : style.menu)}>
+          Messages
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/news">News</NavLink>
+        <NavLink to="/news" className={(navData) => (navData.isActive ? style.active : style.menu)}>
+          News
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/music">Music</NavLink>
+        <NavLink
+          to="/music"
+          className={(navData) => (navData.isActive ? style.active : style.menu)}>
+          Music
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/setting">Setting</NavLink>
+        <NavLink
+          to="/setting"
+          className={(navData) => (navData.isActive ? style.active : style.menu)}>
+          Setting
+        </NavLink>
       </li>
     </ul>
   );

@@ -1,3 +1,11 @@
 .menu {
   margin-bottom: 0.5rem;
 }
+
+.menu  a {
+  text-decoration: none;
+}
+
+.menu a.active{
+  color: aliceblue;
+}
