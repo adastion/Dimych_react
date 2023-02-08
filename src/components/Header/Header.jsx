@@ -1,10 +1,11 @@
-import React from 'react';
-import styles from './Header.module.css';
+import style from './Header.module.css';
+import logo from '../../img/logo.png'
 
 const Header = (props) => {
   return (
-    <header className={styles.header}>
-      <img src="https://media.baamboozle.com/uploads/images/246632/1611410955_79305" alt="logo" />
+    <header className={style.header}>
+      <img src={logo} alt="logo" />
+      <h1>Welcome to my social network</h1>
     </header>
   );
 };

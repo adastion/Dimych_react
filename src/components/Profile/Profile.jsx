@@ -1,18 +1,14 @@
-import React from 'react';
-import '../../App.css';
-import MyPosts from './MyPosts/MyPosts';
-import styles from './Profile.module.css';
-import ProfileInfo from './ProfileInfo/ProfileInfo';
+import Info from './Info/Info';
+import MyPost from './MyPost/MyPost';
+import style from './Profile.module.css';
+import SendingMessage from './SendingMessage/SendingMessage';
 
 const Profile = (props) => {
   return (
-    <div className="content">
-      <div className={styles.banner}></div>
-      <ProfileInfo
-        dispatch={props.dispatch}
-        newPostText={props.newPostText}
-      />
-      <MyPosts posts={props.postsPage} />
+    <div className={style.profile}>
+      <Info />
+      <SendingMessage />
+      <MyPost />
     </div>
   );
 };
