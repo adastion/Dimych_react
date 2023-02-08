@@ -1,7 +1,9 @@
-const stor = {
+import {rerenderEntireTree} from '../render'
+
+const store = {
   state: {
     profilePage: {
-      past: [
+      posts: [
         { id: 1, message: 'Hi', likesCount: 1 },
         { id: 2, message: 'Hi', likesCount: 0 },
         { id: 3, message: 'Hi', likesCount: 12 },
@@ -22,6 +24,18 @@ const stor = {
       ],
     },
 
-    sidebar: {}
+    sidebar: {},
   },
 };
+
+export let addPost = (postMessage) => {
+  let newPost = {
+    id: 1,
+    message: postMessage,
+    likesCount: 0,
+  };
+  store.state.profilePage.posts.push(newPost);
+  rerenderEntireTree(store);
+};
+
+export default store;
