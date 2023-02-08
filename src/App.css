@@ -113,6 +113,10 @@ a {
   grid-column: 1/5;
 }
 
+.footer img {
+  max-height: 3rem;
+}
+
 .content {
   grid-column: 2/5;
 }

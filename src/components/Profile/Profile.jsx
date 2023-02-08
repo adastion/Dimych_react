@@ -1,14 +1,14 @@
 import Info from './Info/Info';
+import MyPost from './MyPost/MyPost';
 import style from './Profile.module.css';
+import SendingMessage from './SendingMessage/SendingMessage';
 
 const Profile = (props) => {
   return (
     <div className={style.profile}>
       <Info />
-      <form action="/" className={style.form} >
-        <textarea name="my-post" className={style.textarea} />
-        <button className={style.btn}>Add post</button>
-      </form>
+      <SendingMessage />
+      <MyPost />
     </div>
   );
 };
