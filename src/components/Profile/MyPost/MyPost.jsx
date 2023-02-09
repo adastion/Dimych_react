@@ -12,7 +12,7 @@ const MyPost = (props) => {
         </div>
         <h3 className={style.name}>Andrey</h3>
       </div>
-      <p className={style.post}>Hi girls! )</p>
+      <p className={style.post}>{props.message}</p>
     </div>
   );
 };

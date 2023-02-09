@@ -1,13 +1,12 @@
-import {rerenderEntireTree} from '../render'
-
+let rerenderEntireTree;
 const store = {
   state: {
     profilePage: {
       posts: [
         { id: 1, message: 'Hi', likesCount: 1 },
-        { id: 2, message: 'Hi', likesCount: 0 },
-        { id: 3, message: 'Hi', likesCount: 12 },
-        { id: 4, message: 'Hi', likesCount: 2 },
+        { id: 2, message: 'Hi girls! )', likesCount: 0 },
+        { id: 3, message: 'Bye', likesCount: 12 },
+        { id: 4, message: 'Hello', likesCount: 2 },
       ],
 
       newPostText: 'textarea',
@@ -28,7 +27,7 @@ const store = {
   },
 };
 
-export let addPost = (postMessage) => {
+export const addPost = (postMessage) => {
   let newPost = {
     id: 1,
     message: postMessage,
@@ -36,6 +35,10 @@ export let addPost = (postMessage) => {
   };
   store.state.profilePage.posts.push(newPost);
   rerenderEntireTree(store);
+};
+
+export const subscribe = (observer) => {
+  rerenderEntireTree = observer;
 };
 
 export default store;
