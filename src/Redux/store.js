@@ -1,4 +1,7 @@
-let rerenderEntireTree;
+let rerenderEntireTree = () => {
+  console.log('red')
+};
+
 const store = {
   state: {
     profilePage: {
@@ -9,7 +12,7 @@ const store = {
         { id: 4, message: 'Hello', likesCount: 2 },
       ],
 
-      newPostText: 'textarea',
+      newPostText: '',
     },
 
     dialogsPage: {
@@ -27,13 +30,19 @@ const store = {
   },
 };
 
-export const addPost = (postMessage) => {
+export const addPost = () => {
   let newPost = {
     id: 1,
-    message: postMessage,
+    message: store.state.profilePage.newPostText,
     likesCount: 0,
   };
   store.state.profilePage.posts.push(newPost);
+  store.state.profilePage.newPostText = '';
+  rerenderEntireTree(store);
+};
+
+export const updateNewPostChange = (text) => {
+  store.state.profilePage.newPostText = text;
   rerenderEntireTree(store);
 };
 

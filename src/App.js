@@ -16,7 +16,16 @@ function App(props) {
         <h2>Content</h2>
         <section>
           <Routes>
-            <Route path="/profile" element={<Profile messages={props.state.profilePage.posts} addPost={props.state.addPost} />}></Route>
+            <Route
+              path="/profile"
+              element={
+                <Profile
+                  newPostText={props.state.profilePage.newPostText}
+                  messages={props.state.profilePage.posts}
+                  addPost={props.addPost}
+                  updateNewPostChange={props.updateNewPostChange}
+                />
+              }></Route>
             <Route path="/dialogs" element={<Dialogs />}></Route>
           </Routes>
         </section>

@@ -1,11 +1,32 @@
+import React from 'react';
 import style from './SendingMessage.module.css';
 
 const SendingMessage = (props) => {
+  let newPostItem = React.createRef();
+
+  const addPost = () => {
+    props.addPost();
+  };
+  
+  const onPostChange = () => {
+    let text = newPostItem.current.value;
+    props.updateNewPostChange(text);
+    console.log(props.newPostText);
+  };
+
   return (
-    <form action="/" className={style.form}>
-      <textarea name="my-post" className={style.textarea} />
-      <button className={style.btn}>Add post</button>
-    </form>
+    <div className={style.form}>
+      <textarea
+        onChange={onPostChange}
+        ref={newPostItem}
+        name="my-post"
+        className={style.textarea}
+        value={props.newPostText}
+      />
+      <button onClick={addPost} className={style.btn}>
+        Add post
+      </button>
+    </div>
   );
 };
 
