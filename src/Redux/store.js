@@ -32,24 +32,26 @@ export const store = {
   _callSubscriber() {
     console.log('red');
   },
-  addPost() {
-    let newPost = {
-      id: 1,
-      message: this._state.profilePage.newPostText,
-      likesCount: 0,
-    };
-    this._state.profilePage.posts.push(newPost);
-    this._state.profilePage.newPostText = '';
-    this._callSubscriber(this._state);
-  },
-
-  updateNewPostChange(text) {
-    this._state.profilePage.newPostText = text;
-    this._callSubscriber(this._state);
-  },
 
   subscribe(observer) {
     this._callSubscriber = observer;
+  },
+
+  dispatch(action) {
+    // { type: 'ADD-POST'} example
+    if (action.type === 'ADD-POST') {
+      let newPost = {
+        id: 1,
+        message: this._state.profilePage.newPostText,
+        likesCount: 0,
+      };
+      this._state.profilePage.posts.push(newPost);
+      this._state.profilePage.newPostText = '';
+      this._callSubscriber(this._state);
+    } else if (action.type === 'UPDATE-NEW-POST-CHANGE') {
+      this._state.profilePage.newPostText = action.newText;
+      this._callSubscriber(this._state);
+    }
   },
 };
 

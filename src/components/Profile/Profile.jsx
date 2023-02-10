@@ -9,11 +9,7 @@ const Profile = (props) => {
   return (
     <div className={style.profile}>
       <Info />
-      <SendingMessage
-        updateNewPostChange={props.updateNewPostChange}
-        newPostText={props.newPostText}
-        addPost={props.addPost}
-      />
+      <SendingMessage newPostText={props.newPostText} dispatch={props.dispatch} />
       {renderPost}
     </div>
   );
