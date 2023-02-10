@@ -1,7 +1,7 @@
 import { React } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import logoFooter from './img/logo_footer.png'
-import { Route, Routes } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
 import Profile from './components/Profile/Profile';
@@ -16,7 +16,16 @@ function App(props) {
         <h2>Content</h2>
         <section>
           <Routes>
-            <Route path="/profile" element={<Profile />}></Route>
+            <Route
+              path="/profile"
+              element={
+                <Profile
+                  newPostText={props.state.profilePage.newPostText}
+                  messages={props.state.profilePage.posts}
+                  addPost={props.addPost}
+                  updateNewPostChange={props.updateNewPostChange}
+                />
+              }></Route>
             <Route path="/dialogs" element={<Dialogs />}></Route>
           </Routes>
         </section>
