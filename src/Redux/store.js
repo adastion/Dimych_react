@@ -1,4 +1,4 @@
-export const store = {
+const store = {
   _state: {
     profilePage: {
       posts: [
@@ -51,6 +51,35 @@ export const store = {
   subscribe(observer) {
     this._callSubscriber = observer;
   },
+
+  dispatch(action) {
+    // { type: 'ADD-POST'} example
+    if (action.type === 'ADD-POST') {
+      let newPost = {
+        id: 1,
+        message: this._state.profilePage.newPostText,
+        likesCount: 0,
+      };
+      this._state.profilePage.posts.push(newPost);
+      this._state.profilePage.newPostText = '';
+      this._callSubscriber(this._state);
+    } else if (action.type === 'UPDATE-NEW-POST-CHANGE') {
+      this._state.profilePage.newPostText = action.newText;
+      this._callSubscriber(this._state);
+    }
+  },
 };
 
+const ADD_POST = 'ADD-POST';
+const UPDATE_NEW_POST_CHANGE = 'UPDATE-NEW-POST-CHANGE';
+
+export const addPostActionCreator = () => {
+  return { type: ADD_POST };
+};
+
+export const updateNewPostActionCreator = (text) => {
+  return { type: UPDATE_NEW_POST_CHANGE, newText: text };
+};
+
+export default store;
 window.store = store;

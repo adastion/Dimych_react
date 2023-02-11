@@ -1,16 +1,17 @@
 import React from 'react';
+import { addPostActionCreator, updateNewPostActionCreator } from '../../../Redux/store';
 import style from './SendingMessage.module.css';
 
 const SendingMessage = (props) => {
   let newPostItem = React.createRef();
 
   const addPost = () => {
-    props.addPost();
+    props.dispatch(addPostActionCreator());
   };
 
   const onPostChange = () => {
     let text = newPostItem.current.value;
-    props.updateNewPostChange(text);
+    props.dispatch(updateNewPostActionCreator(text));
   };
 
   return (
