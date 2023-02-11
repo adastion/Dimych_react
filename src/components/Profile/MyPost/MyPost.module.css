@@ -17,4 +17,7 @@
 
 .post {
   color: aquamarine;
+  background: #607d8b;
+  padding: 0.8rem;
+  border-radius: 6px;
 }
