@@ -7,11 +7,10 @@ const SendingMessage = (props) => {
   const addPost = () => {
     props.addPost();
   };
-  
+
   const onPostChange = () => {
     let text = newPostItem.current.value;
     props.updateNewPostChange(text);
-    console.log(props.newPostText);
   };
 
   return (

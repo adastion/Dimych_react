@@ -14,7 +14,7 @@ const Profile = (props) => {
         newPostText={props.newPostText}
         addPost={props.addPost}
       />
-      {renderPost}
+      <div className={style.blockPost}>{renderPost}</div>
     </div>
   );
 };
