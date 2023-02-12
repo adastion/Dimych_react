@@ -1,3 +1,16 @@
 .dialogs {
-  
+  display: grid;
+  gap: 0.8rem;
+}
+
+.textarea {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.input {
+  resize: none;
+  height: 50px;
+  max-height: 50px;
+  border-radius: 6px;
 }

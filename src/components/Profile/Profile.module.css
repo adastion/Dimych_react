@@ -2,3 +2,9 @@
   display: grid;
   gap: 1rem;
 }
+
+.blockPost {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem 0.5rem;
+}

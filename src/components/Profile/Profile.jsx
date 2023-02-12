@@ -9,12 +9,8 @@ const Profile = (props) => {
   return (
     <div className={style.profile}>
       <Info />
-      <SendingMessage
-        updateNewPostChange={props.updateNewPostChange}
-        newPostText={props.newPostText}
-        addPost={props.addPost}
-      />
-      {renderPost}
+      <SendingMessage newPostText={props.newPostText} dispatch={props.dispatch} />
+      <div className={style.blockPost}>{renderPost}</div>
     </div>
   );
 };
