@@ -17,6 +17,15 @@ const store = {
     },
 
     dialogsPage: {
+      users: [
+        { id: 1, name: 'Dimych' },
+        { id: 2, name: 'Andrey' },
+        { id: 3, name: 'Sveta' },
+        { id: 4, name: 'Sasha' },
+        { id: 5, name: 'Victor' },
+        { id: 6, name: 'Valera' },
+      ],
+
       dialogs: [
         { id: 1, message: 'red', name: 'Dimych' },
         { id: 2, message: 'asd', name: 'Andrey' },

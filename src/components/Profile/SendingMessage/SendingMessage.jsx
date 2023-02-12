@@ -8,7 +8,6 @@ import {
 import style from './SendingMessage.module.css';
 
 const SendingMessage = (props) => {
-  let newPostItem = React.createRef();
 
   const addPost = () => {
     props.dispatch(
@@ -16,8 +15,8 @@ const SendingMessage = (props) => {
     );
   };
 
-  const onPostChange = () => {
-    let text = newPostItem.current.value;
+  const onPostChange = (event) => {
+    let text = event.target.value;
     props.dispatch(
       props.hasOwnProperty('newMessageText')
         ? updateNewMessageActionCreator(text)
@@ -29,7 +28,6 @@ const SendingMessage = (props) => {
     <div className={style.form}>
       <textarea
         onChange={onPostChange}
-        ref={newPostItem}
         name="my-post"
         className={style.textarea}
         value={props.hasOwnProperty('newMessageText') ? props.newMessageText : props.newPostText}
