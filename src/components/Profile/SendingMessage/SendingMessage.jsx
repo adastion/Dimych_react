@@ -1,17 +1,28 @@
 import React from 'react';
-import { addPostActionCreator, updateNewPostActionCreator } from '../../../Redux/store';
+import {
+  addMessageActionCreator,
+  addPostActionCreator,
+  updateNewMessageActionCreator,
+  updateNewPostActionCreator,
+} from '../../../Redux/store';
 import style from './SendingMessage.module.css';
 
 const SendingMessage = (props) => {
   let newPostItem = React.createRef();
 
   const addPost = () => {
-    props.dispatch(addPostActionCreator());
+    props.dispatch(
+      props.hasOwnProperty('newMessageText') ? addMessageActionCreator() : addPostActionCreator(),
+    );
   };
 
   const onPostChange = () => {
     let text = newPostItem.current.value;
-    props.dispatch(updateNewPostActionCreator(text));
+    props.dispatch(
+      props.hasOwnProperty('newMessageText')
+        ? updateNewMessageActionCreator(text)
+        : updateNewPostActionCreator(text),
+    );
   };
 
   return (
@@ -21,7 +32,7 @@ const SendingMessage = (props) => {
         ref={newPostItem}
         name="my-post"
         className={style.textarea}
-        value={props.newPostText}
+        value={props.hasOwnProperty('newMessageText') ? props.newMessageText : props.newPostText}
       />
       <button onClick={addPost} className={style.btn}>
         Add post

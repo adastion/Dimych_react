@@ -1,7 +1,7 @@
 import { React } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import logoFooter from './img/logo_footer.png'
+import logoFooter from './img/logo_footer.png';
 import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
 import Profile from './components/Profile/Profile';
@@ -25,7 +25,15 @@ function App(props) {
                   dispatch={props.dispatch}
                 />
               }></Route>
-            <Route path="/dialogs" element={<Dialogs />}></Route>
+            <Route
+              path="/dialogs"
+              element={
+                <Dialogs
+                  dialogs={props.state.dialogsPage.dialogs}
+                  newMessageText={props.state.dialogsPage.newMessageText}
+                  dispatch={props.dispatch}
+                />
+              }></Route>
           </Routes>
         </section>
       </main>

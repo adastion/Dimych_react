@@ -1,0 +1,19 @@
+.dialogMessage {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.text {
+  color: aquamarine;
+  background: #607d8b;
+  padding: 0.8rem;
+  border-radius: 6px;
+}

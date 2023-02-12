@@ -1,3 +1,8 @@
+const ADD_POST = 'ADD-POST';
+const UPDATE_NEW_POST_CHANGE = 'UPDATE-NEW-POST-CHANGE';
+const ADD_MESSAGE = 'ADD-MESSAGE';
+const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
+
 const store = {
   _state: {
     profilePage: {
@@ -13,13 +18,15 @@ const store = {
 
     dialogsPage: {
       dialogs: [
-        { id: 1, name: 'Dimych' },
-        { id: 2, name: 'Andrey' },
-        { id: 3, name: 'Sveta' },
-        { id: 4, name: 'Sasha' },
-        { id: 5, name: 'Victor' },
-        { id: 6, name: 'Valera' },
+        { id: 1, message: 'red', name: 'Dimych' },
+        { id: 2, message: 'asd', name: 'Andrey' },
+        { id: 3, message: 'ccccccc', name: 'Sveta' },
+        { id: 4, message: 'ccc', name: 'Sasha' },
+        { id: 5, message: 'aa', name: 'Victor' },
+        { id: 6, message: 'ccc', name: 'Valera' },
       ],
+
+      newMessageText: '',
     },
 
     sidebar: {},
@@ -54,7 +61,7 @@ const store = {
 
   dispatch(action) {
     // { type: 'ADD-POST'} example
-    if (action.type === 'ADD-POST') {
+    if (action.type === ADD_POST) {
       let newPost = {
         id: 1,
         message: this._state.profilePage.newPostText,
@@ -63,15 +70,20 @@ const store = {
       this._state.profilePage.posts.push(newPost);
       this._state.profilePage.newPostText = '';
       this._callSubscriber(this._state);
-    } else if (action.type === 'UPDATE-NEW-POST-CHANGE') {
+    } else if (action.type === UPDATE_NEW_POST_CHANGE) {
       this._state.profilePage.newPostText = action.newText;
+      this._callSubscriber(this._state);
+    } else if (action.type === ADD_MESSAGE) {
+      let newMessage = { id: 1, message: this._state.dialogsPage.newMessageText, name: 'Dimych' };
+      this._state.dialogsPage.dialogs.push(newMessage);
+      this._state.dialogsPage.newMessageText = '';
+      this._callSubscriber(this._state);
+    } else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
+      this._state.dialogsPage.newMessageText = action.newText;
       this._callSubscriber(this._state);
     }
   },
 };
-
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_CHANGE = 'UPDATE-NEW-POST-CHANGE';
 
 export const addPostActionCreator = () => {
   return { type: ADD_POST };
@@ -79,6 +91,14 @@ export const addPostActionCreator = () => {
 
 export const updateNewPostActionCreator = (text) => {
   return { type: UPDATE_NEW_POST_CHANGE, newText: text };
+};
+
+export const addMessageActionCreator = () => {
+  return { type: ADD_MESSAGE };
+};
+
+export const updateNewMessageActionCreator = (text) => {
+  return { type: UPDATE_NEW_MESSAGE_TEXT, newText: text };
 };
 
 export default store;
