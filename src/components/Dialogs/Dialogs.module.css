@@ -1,5 +1,6 @@
 .dialogs {
   display: grid;
+  grid-template-columns: 1fr 4fr;
   gap: 0.8rem;
 }
 
@@ -13,4 +14,11 @@
   height: 50px;
   max-height: 50px;
   border-radius: 6px;
+}
+
+.wrapMessage {
+  display: grid;
+  gap: 0.8rem;
+  height: 300px;
+  overflow-y: scroll;
 }
