@@ -1,14 +1,9 @@
 import React from 'react';
-import {
-  addMessageActionCreator,
-  addPostActionCreator,
-  updateNewMessageActionCreator,
-  updateNewPostActionCreator,
-} from '../../../Redux/store';
+import { addPostActionCreator, updateNewPostActionCreator } from '../../../Redux/profile-reducer';
+import { addMessageActionCreator,  updateNewMessageActionCreator } from '../../../Redux/dialogs-reducer';
 import style from './SendingMessage.module.css';
 
 const SendingMessage = (props) => {
-
   const addPost = () => {
     props.dispatch(
       props.hasOwnProperty('newMessageText') ? addMessageActionCreator() : addPostActionCreator(),
