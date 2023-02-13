@@ -19,4 +19,6 @@
 .wrapMessage {
   display: grid;
   gap: 0.8rem;
+  height: 300px;
+  overflow-y: scroll;
 }

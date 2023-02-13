@@ -1,3 +1,7 @@
+import dialogsReducer from './dialogs-reducer';
+import profileReducer from './profile-reducer';
+import sidebarReducer from './sidebar-reducer';
+
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_CHANGE = 'UPDATE-NEW-POST-CHANGE';
 const ADD_MESSAGE = 'ADD-MESSAGE';
@@ -46,8 +50,9 @@ const store = {
   },
 
   _callSubscriber() {
-    console.log('red');
+    console.log('redy');
   },
+
   addPost() {
     let newPost = {
       id: 1,
@@ -69,28 +74,10 @@ const store = {
   },
 
   dispatch(action) {
-    // { type: 'ADD-POST'} example
-    if (action.type === ADD_POST) {
-      let newPost = {
-        id: 1,
-        message: this._state.profilePage.newPostText,
-        likesCount: 0,
-      };
-      this._state.profilePage.posts.push(newPost);
-      this._state.profilePage.newPostText = '';
-      this._callSubscriber(this._state);
-    } else if (action.type === UPDATE_NEW_POST_CHANGE) {
-      this._state.profilePage.newPostText = action.newText;
-      this._callSubscriber(this._state);
-    } else if (action.type === ADD_MESSAGE) {
-      let newMessage = { id: 1, message: this._state.dialogsPage.newMessageText, name: 'Dimych' };
-      this._state.dialogsPage.dialogs.push(newMessage);
-      this._state.dialogsPage.newMessageText = '';
-      this._callSubscriber(this._state);
-    } else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
-      this._state.dialogsPage.newMessageText = action.newText;
-      this._callSubscriber(this._state);
-    }
+    this._state.profilePage = profileReducer(this._state.profilePage, action);
+    this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
+    this._state.sidebar = sidebarReducer(this._state.sidebar, action);
+    this._callSubscriber(this._state);
   },
 };
 
