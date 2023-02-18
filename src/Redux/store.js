@@ -13,13 +13,20 @@ export const store = {
 
     dialogsPage: {
       dialogs: [
+        { id: 1, name: 'Dimych', messages: 'hello' },
+        { id: 2, name: 'Andrey', messages: 'hello' },
+        { id: 3, name: 'Sveta', messages: 'hello' },
+        { id: 4, name: 'Sasha', messages: 'hello' },
+        { id: 5, name: 'Victor', messages: 'hello' },
+        { id: 6, name: 'Valera', messages: 'hello' },
+      ],
+      
+      users: [
         { id: 1, name: 'Dimych' },
         { id: 2, name: 'Andrey' },
         { id: 3, name: 'Sveta' },
-        { id: 4, name: 'Sasha' },
-        { id: 5, name: 'Victor' },
-        { id: 6, name: 'Valera' },
-      ],
+        
+      ]
     },
 
     sidebar: {},

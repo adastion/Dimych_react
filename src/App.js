@@ -25,7 +25,7 @@ function App(props) {
                   dispatch={props.dispatch}
                 />
               }></Route>
-            <Route path="/dialogs" element={<Dialogs />}></Route>
+            <Route path="/dialogs" element={<Dialogs users={props.state.dialogsPage.users} />}></Route>
           </Routes>
         </section>
       </main>
