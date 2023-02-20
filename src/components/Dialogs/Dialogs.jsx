@@ -1,18 +1,15 @@
 import style from './Dialogs.module.css';
-import { NavLink } from 'react-router-dom';
+import UserDialog from './UserDialog/UserDialog';
 
 const Dialogs = (props) => {
-  // let listUsers = props.users.map((item) => <li>{item.name}</li>);
+
+  let listUsers = props.users.map((item) => <UserDialog name={item.name} />);
   return (
     <div className={style.dialogs}>
       <div className={style.usersList}>
-      <h2>Users</h2>
+        <h2>Users</h2>
         <ul className={style.usersDialogs}>
-          <li>
-            <NavLink to="/users">{props.users[0].name}</NavLink>
-          </li>
-          <li>{props.users[2].name}</li>
-          {/* {listUsers} */}
+          {listUsers}
         </ul>
       </div>
       <div className={style.chat}>
