@@ -1,29 +1,29 @@
 import { React } from 'react';
 import './App.css';
-import Dialogs from './components/Dialogs/Dialogs';
-import Header from './components/Header/Header';
-import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
-import { Route, Routes } from 'react-router-dom';
+import Dialogs from './components/Dialogs/Dialogs';
+import { NavLink, Route, Routes } from 'react-router-dom';
 
 function App(props) {
   return (
     <div className="app">
-      <Header />
-      <Navbar user={props.state.users} sidebar={props.state.sidebar} />
-      <Routes>
-        <Route
-          path="/profile"
-          element={
-            <Profile
-              dispatch={props.dispatch}
-              postsPage={props.state.postsPage}
-              newPostText={props.state.postsPage.newPostText}
-            />
-          }
-        />
-        <Route path="/dialogs" element={<Dialogs users={props.state.users} />} />
-      </Routes>
+      <nav>
+        <ul>
+          <li>
+            <NavLink to="/profile">profile</NavLink>
+          </li>
+          <li>
+            <NavLink to="/dialogs">dialogs</NavLink>
+          </li>
+        </ul>
+      </nav>
+      <div className="content">
+        <h1>Content</h1>
+        <Routes>
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/dialogs" element={<Dialogs />} />
+        </Routes>
+      </div>
     </div>
   );
 }
